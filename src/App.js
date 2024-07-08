@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/auth/login/Login";
+import Register from "./components/auth/register/Register";
+import Navbar from "./components/navbar/Navbar";
+import { AuthProvider } from "./contexts/authContext/AuthContext";
+import Dashboard from "./components/home/Dashboard";
+import Choppy from "./components/choppy/Choppy";
+import Instructors from "./components/instructors/Instructors";
+import Students from "./components/students/Students";
+import Analytics from "./components/analytics/Analytics"
+import Help from "./components/help/Help"
+import Courses from "./components/courses/Courses"
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/choppy" element={<Choppy />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/students" element={<Students />} />
+          <Route path="/instructors" element={<Instructors />} />
+          
+
+        </Routes>
+      </Router>
+    </AuthProvider>
+  
   );
 }
 

@@ -1,0 +1,30 @@
+.dashboard {
+    display: flex;
+    background-color: rgba(11, 102, 35, 1); /* Green Background */
+   
+}
+
+.content-card {
+    flex: 1;
+    background-color: white;
+    margin: 20px;
+    margin-top: 100px;
+    margin-left: 200px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 1000px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .content-card {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-card {
+        margin-left: 70px;
+        padding: 10px; 
+    }
+}
