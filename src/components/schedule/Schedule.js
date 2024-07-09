@@ -4,7 +4,7 @@ import Sidebar from '../sidebar/Sidebar';
 
 
 
-const Students = () => {
+const Schedule = () => {
     return (
         <div className="dashboard">
             <Sidebar />
@@ -17,4 +17,4 @@ const Students = () => {
     );
 };
 
-export default Students;
+export default Schedule;

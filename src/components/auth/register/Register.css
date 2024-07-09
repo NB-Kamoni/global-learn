@@ -18,7 +18,7 @@
 .register-header {
     font-size: 24px;
     font-weight: bold;
-    color: rgb(3, 69, 21);
+    color: rgba(65,105,225);
 }
 
 .register-form {
@@ -40,13 +40,13 @@
 }
 
 .register-input:focus {
-    border-color: rgba(11, 102, 35);
+    border-color: rgba(65,105,225);
 }
 
 .register-button {
     padding: 10px;
     color: white;
-    background-color: rgba(11, 102, 35);
+    background-color: rgba(65,105,225);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -54,7 +54,7 @@
 }
 
 .register-button:hover {
-    background-color: rgb(3, 69, 21);
+    background-color: rgba(65,105,225);
 }
 
 .disabled {
@@ -73,12 +73,12 @@
 }
 
 .login-link-text {
-    color: rgba(11, 102, 35);
+    color: rgba(65,105,225);
     font-weight: bold;
     text-decoration: none;
 }
 
 .login-link-text:hover {
     text-decoration: underline;
-    color: rgba(11, 102, 35);
+    color: rgba(65,105,225);
 }

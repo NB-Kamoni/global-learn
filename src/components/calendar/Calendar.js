@@ -4,7 +4,7 @@ import Sidebar from '../sidebar/Sidebar';
 
 
 
-const Instructors = () => {
+const Calendar = () => {
     return (
         <div className="dashboard">
             <Sidebar />
@@ -17,4 +17,4 @@ const Instructors = () => {
     );
 };
 
-export default Instructors;
+export default Calendar;

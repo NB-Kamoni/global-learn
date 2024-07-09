@@ -45,7 +45,10 @@ const Login = () => {
     return (
         <div className="login-page">
             <div className="login-card">
-                <h2 className="login-header">FarmFolio</h2>
+                
+            <div>
+      <img src="https://github.com/NB-Kamoni/Images/blob/main/GLMS%20LOGO%20WHITE-B.png?raw=true" alt="Global Learn Logo" className="login-header-img" />
+          </div>
                 <form onSubmit={onSubmit} className="login-form">
                     <div className="login-field">
                         <label>Email</label>
@@ -80,12 +83,12 @@ const Login = () => {
                         {isSigningIn ? 'Signing In...' : 'Sign In'}
                     </button>
                 </form>
-                <div className="register-link">
+                {/* <div className="register-link">
                     Don't have an account?{' '}
                     <Link to="/register" className="sign-up-link">
                         Sign up
                     </Link>
-                </div>
+                </div> */}
                 <div className="login-divider">
                     <div className="divider-line"></div>
                     <span>OR</span>

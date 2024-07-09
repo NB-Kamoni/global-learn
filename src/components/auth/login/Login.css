@@ -1,24 +1,53 @@
+
+.login-header-img {
+    width: 200px;  /* Adjust width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* Ensures the image is block-level */
+    margin: 0 auto;  /* Center align horizontally */
+    padding-bottom: 50px;
+    
+  }
+
+
+
 .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('/public/graduation 1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Add this */
 }
 
+.login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(65,105,225, 0.9); /* Semi-transparent color */
+    z-index: 1; /* Ensures the overlay is above the background image but below the login card */
+}
 .login-card {
-    padding: 20px;
+    padding: 80px;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background: white;
     width: 400px;
     text-align: center;
+    z-index: 1000; 
+    justify-content: center;
 }
 
 .login-header {
     font-size: 24px;
     font-weight: bold;
-    color: rgba(11, 102, 35);
+    color: rgba(65,105,225);
+    padding-bottom: 20PX;
 }
 
 .login-form {
@@ -40,13 +69,14 @@
 }
 
 .login-input:focus {
-    border-color: rgba(11, 102, 35);
+    border-color: rgba(65,105,225));
 }
 
 .login-button {
+    justify-content: center;
     padding: 10px;
     color: white;
-    background-color: rgba(11, 102, 35);
+    background-color: rgba(65,105,225);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -55,7 +85,7 @@
 }
 
 .login-button:hover {
-    background-color: rgb(3, 69, 21);
+    background-color: rgba(9, 237, 237);
   
 }
 
@@ -104,26 +134,25 @@
 }
 
 .google-sign-in {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+      
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgba(65,105,225);
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
-    margin-left: 25%;
+    color: white;
+    width: 100%;
+    padding: 10px;
 }
 
 .google-sign-in:hover {
-    background-color: rgba(11, 102, 35);
+    background-color: rgba(9, 237, 237);
     color: white;
 }
 
 .google-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10%;
 }

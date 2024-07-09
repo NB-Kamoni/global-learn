@@ -20,10 +20,10 @@
   }
   
   .custom-image {
-    max-width: 80px;
+    max-width: 130px;
   }
   
   :hover.custom-menuitem {
     font-size: 1.125rem; 
-    color: rgb(9, 237, 92) !important; 
+    color: rgb(9, 237, 237) !important; 
   }

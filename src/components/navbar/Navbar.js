@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
   const navbarStyle = {
-    backgroundColor: isScrolled ? 'rgba(11, 102, 35, 0.9)' : 'transparent', 
+    backgroundColor: isScrolled ? 'rgba(65,105,225, 0.9)' : 'transparent', 
     padding: '16px', 
     position: 'fixed',
     top: 0, 
@@ -35,7 +35,7 @@ const Navbar = () => {
   
   };
 
-  const logoUrl = 'https://github.com/NB-Kamoni/Images/blob/main/FarmFolioLogo.png?raw=true';
+  const logoUrl = 'https://github.com/NB-Kamoni/Images/blob/main/GLMS%20LOGO%20B.png?raw=true';
 
   return (
     <Menu secondary style={navbarStyle}>
@@ -45,20 +45,21 @@ const Navbar = () => {
           <Image src={logoUrl} alt="Company Logo" size="small"  />
       </Menu.Item>
       <Menu.Item className='custom-menuitem' as={Link} to="/">Home</Menu.Item>
-      <Menu.Item className='custom-menuitem'  as={Link} to="/market">Market</Menu.Item>
-      <Menu.Item className='custom-menuitem'  as={Link} to="/hodari">Ask Hodari</Menu.Item>
-      <Menu.Item className='custom-menuitem'  as={Link} to="/services">Services</Menu.Item>
+      <Menu.Item className='custom-menuitem'  as={Link} to="/exams">Exams</Menu.Item>
+      <Menu.Item className='custom-menuitem'  as={Link} to="/schedule">Schedule</Menu.Item>
+      <Menu.Item className='custom-menuitem'  as={Link} to="/finance">Finance</Menu.Item>
+      <Menu.Item className='custom-menuitem'  as={Link} to="/courses">Courses</Menu.Item>
 
       {userLoggedIn && (
         <Menu.Menu position="right">
-          <Menu.Item className='custom-menuitem'  as={Link} to="/dashboard">Dashboard</Menu.Item>
-          <Menu.Item className='custom-menuitem'  as={Link} to="/account">My Account</Menu.Item>
+          <Menu.Item className='custom-menuitem'  as={Link} to="/enquiries">Enquiries</Menu.Item>
+          <Menu.Item className='custom-menuitem'  as={Link} to="/choppy">Ask Choppy</Menu.Item>
           <Menu.Item>
             <Button
               basic
               inverted
               onClick={() => {
-                doSignOut().then(() => navigate('/home'));
+                doSignOut().then(() => navigate('/login'));
               }}
             >
               Logout

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useAuth } from '../../contexts/authContext/AuthContext';
-import TypingEffect from '../TypingEffect';
 import './WelcomeMessage.css';
 
 const getGreeting = () => {
@@ -30,27 +29,24 @@ const WelcomeMessage = () => {
     : extractFirstName(currentUser.email); // Extract from email if no display name
 
   return (
-    <div className="welcome-card"> {/* Main card element */}
-      <div className="welcome-greeting"> {/* Header for greeting */}
+    <div className="welcome-card">
+      <div className="profile-circle">
+        {/* Display user's profile picture or initials */}
+        {currentUser.photoURL ? (
+          <img src={currentUser.photoURL} alt="Profile" className="profile-image" />
+        ) : (
+          <div className="profile-initials">{userName.charAt(0)}</div>
+        )}
+      </div>
+      <div className="welcome-greeting">
         {greeting}, {userName}!
       </div>
-      <div className="welcome-message"><div>
-      <TypingEffect
-      texts={[
-        "Welcome to your ultimate farm management hub!",
-        "Here's what you can achieve with our platform:",
-        "Keep detailed Notebooks to record every aspect of your production.",
-        "Unlock Analytics to boost efficiency and improve yields.",
-        "Manage Inventory effortlessly, ensuring you're always in control.",
-        "Connect with a thriving Market to sell your products with ease.",
-        "Access a wide range of Services—need a Vet? We've got you covered!",
-        "Empower your farm through expert-led Training sessions.",
-        "Get instant answers to your agriculture questions with 'Ask Hodari.'"
-    ]}
-      speed={100} // Speed in milliseconds
-      pause={1000} // Pause for 1 second after typing
-    />
-    </div>
+      <div className="welcome-message">
+        {/* TypingEffect component can be added here */}
+        <div className="welcome-buttons">
+          <button className="welcome-button">Profile</button>
+          <button className="welcome-button">Updates</button>
+        </div>
       </div>
     </div>
   );

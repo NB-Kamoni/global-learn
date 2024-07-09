@@ -42,7 +42,7 @@ const Register = () => {
     return (
         <div className="register-page">
             <div className="register-card">
-                <h2 className="register-header">Welcome to FarmFolio</h2>
+                <h2 className="register-header">Welcome to Global Learn</h2>
                 <form onSubmit={onSubmit} className="register-form">
                     <div className="register-field">
                         <label>Email</label>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { FaTachometerAlt, FaBook, FaChartLine, FaQuestionCircle, FaBars, FaBox, FaGraduationCap } from 'react-icons/fa';
+import { FaTachometerAlt, FaBook, FaChartLine, FaQuestionCircle, FaBars, FaBox, FaGraduationCap, FaCalendar } from 'react-icons/fa';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -33,9 +33,9 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/notebooks">
+                    <Link to="/notes">
                         <FaBook />
-                        {!isCollapsed && <span>Notebooks</span>}
+                        {!isCollapsed && <span>Notes</span>}
                     </Link>
                 </li>
                 <li>
@@ -45,15 +45,15 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/inventory">
-                        <FaBox  />
-                        {!isCollapsed && <span>My Inventory</span>}
+                    <Link to="/calendar">
+                        <FaCalendar  />
+                        {!isCollapsed && <span>My Calendar</span>}
                     </Link>
                 </li>
                 <li>
-                    <Link to="/training">
+                    <Link to="/opportunities">
                         <FaGraduationCap  />
-                        {!isCollapsed && <span>Training</span>}
+                        {!isCollapsed && <span>Opportunities</span>}
                     </Link>
                 </li>
                 <li>
