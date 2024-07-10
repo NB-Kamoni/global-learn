@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import Profile from '../profile/Profile';
-import Messages from '../messages/Messages'; // Import the Messages component
+import Messages from '../messages/Messages';
 import './WelcomeMessage.css';
 
 const getGreeting = () => {
@@ -22,6 +22,18 @@ const extractFirstName = (email) => {
   return firstName.charAt(0).toUpperCase() + firstName.slice(1); // Capitalize
 };
 
+const getUserRole = (email) => {
+  if (email.endsWith('@admin.glms.com')) {
+    return 'Admin';
+  } else if (email.endsWith('@student.glms.com')) {
+    return 'Student';
+  } else if (email.endsWith('@glms.com')) {
+    return 'Instructor';
+  } else {
+    return 'User';
+  }
+};
+
 const WelcomeMessage = () => {
   const { currentUser } = useAuth();
   const greeting = getGreeting();
@@ -31,6 +43,8 @@ const WelcomeMessage = () => {
   const userName = currentUser.displayName
     ? currentUser.displayName.split(' ')[0] // Extract first name from display name
     : extractFirstName(currentUser.email); // Extract from email if no display name
+
+  const userRole = getUserRole(currentUser.email);
 
   const showProfileDrawer = () => {
     setProfileDrawerVisible(true);
@@ -62,7 +76,7 @@ const WelcomeMessage = () => {
         {greeting}, {userName}!
       </div>
       <div className="welcome-message">
-        {/* TypingEffect component can be added here */}
+        Welcome to the {userRole} Dashboard.
         <div className="welcome-buttons">
           <button className="welcome-button" onClick={showProfileDrawer}>Profile</button>
           <button className="welcome-button" onClick={showMessagesDrawer}>Messages</button>

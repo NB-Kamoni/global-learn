@@ -1,0 +1,19 @@
+.admin-finance-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .finance-chart {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .finance-details {
+    margin-top: 20px;
+  }
+  
+  .finance-details p {
+    margin: 5px 0;
+  }
+  
