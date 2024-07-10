@@ -10,7 +10,6 @@ const Choppy = () => {
             <Sidebar />
                 <div className="content-card">
                     {/* Content Goes Here */}
-                  <h1>Coming Soon</h1>
                 </div>
             </div>
        

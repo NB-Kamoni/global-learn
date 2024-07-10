@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
+import Profile from '../profile/Profile';
+import Messages from '../messages/Messages'; // Import the Messages component
 import './WelcomeMessage.css';
 
 const getGreeting = () => {
@@ -23,10 +25,28 @@ const extractFirstName = (email) => {
 const WelcomeMessage = () => {
   const { currentUser } = useAuth();
   const greeting = getGreeting();
+  const [profileDrawerVisible, setProfileDrawerVisible] = useState(false);
+  const [messagesDrawerVisible, setMessagesDrawerVisible] = useState(false);
 
   const userName = currentUser.displayName
     ? currentUser.displayName.split(' ')[0] // Extract first name from display name
     : extractFirstName(currentUser.email); // Extract from email if no display name
+
+  const showProfileDrawer = () => {
+    setProfileDrawerVisible(true);
+  };
+
+  const closeProfileDrawer = () => {
+    setProfileDrawerVisible(false);
+  };
+
+  const showMessagesDrawer = () => {
+    setMessagesDrawerVisible(true);
+  };
+
+  const closeMessagesDrawer = () => {
+    setMessagesDrawerVisible(false);
+  };
 
   return (
     <div className="welcome-card">
@@ -44,10 +64,12 @@ const WelcomeMessage = () => {
       <div className="welcome-message">
         {/* TypingEffect component can be added here */}
         <div className="welcome-buttons">
-          <button className="welcome-button">Profile</button>
-          <button className="welcome-button">Updates</button>
+          <button className="welcome-button" onClick={showProfileDrawer}>Profile</button>
+          <button className="welcome-button" onClick={showMessagesDrawer}>Messages</button>
         </div>
       </div>
+      <Profile visible={profileDrawerVisible} onClose={closeProfileDrawer} />
+      <Messages visible={messagesDrawerVisible} onClose={closeMessagesDrawer} />
     </div>
   );
 };
