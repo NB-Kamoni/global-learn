@@ -55,5 +55,5 @@
 }
 
 .sidebar .toggle-button:hover {
-    color: rgb(9, 237, 92); /* Slight color change on hover */
+    color: rgba(9, 237, 237); /* Slight color change on hover */
 }

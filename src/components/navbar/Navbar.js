@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { doSignOut } from '../../firebase/auth';
 import { Button, Menu, Image } from 'semantic-ui-react';
-import './Navbar.css'; /* Custom CSS file for additional styling */
+import './Navbar.css';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false); // Track if the navbar is scrolled
@@ -24,7 +25,7 @@ const Navbar = () => {
 
 
   const navbarStyle = {
-    backgroundColor: isScrolled ? 'rgba(65,105,225, 0.9)' : 'transparent', 
+    backgroundColor: isScrolled ? 'rgb(9, 105, 125, 0.9)' : 'transparent', 
     padding: '16px', 
     position: 'fixed',
     top: 0, 
@@ -35,7 +36,7 @@ const Navbar = () => {
   
   };
 
-  const logoUrl = 'https://github.com/NB-Kamoni/Images/blob/main/GLMS%20LOGO%20B.png?raw=true';
+  const logoUrl = 'https://github.com/NB-Kamoni/Images/blob/main/GLMS%20New.png?raw=true';
 
   return (
     <Menu secondary style={navbarStyle}>
@@ -52,6 +53,7 @@ const Navbar = () => {
 
       {userLoggedIn && (
         <Menu.Menu position="right">
+           <SearchBar />
           <Menu.Item className='custom-menuitem'  as={Link} to="/enquiries">Enquiries</Menu.Item>
           <Menu.Item className='custom-menuitem'  as={Link} to="/choppy">Ask Choppy</Menu.Item>
           <Menu.Item>
