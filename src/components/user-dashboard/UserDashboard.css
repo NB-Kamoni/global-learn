@@ -2,12 +2,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40vh;
-    background-color: #f0f0f0; /* Example background color */
+    height: 42vh;
+    background-color: #09697D; /* Example background color */
     border-radius: 10px;
   }
+
+  .summary-containe:hover {
   
-  .welcome-card {
-    margin: 0 10px; /* Optional: to add some space between cards */
+    box-shadow: 0 4px 10px rgba(9, 237, 237); /* Increase shadow to make it pop */
   }
+  
+  
   

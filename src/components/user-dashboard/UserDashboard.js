@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import { useAuth } from '../../contexts/AuthContext';
 import WelcomeMessage from '../home/WelcomeMessage';
+import AdminFinanceSummary from '../finance/AdminFinanceSummary';
+import AdminExamSummary from '../exams/AdminExamSummary';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
@@ -38,8 +40,9 @@ const UserDashboard = () => {
                         <div className="summary-container">
                             {/* Add admin-specific dashboard content here */}
                            <WelcomeMessage />
-                           <WelcomeMessage />
-                           <WelcomeMessage />
+                           <AdminExamSummary />
+                           <AdminFinanceSummary />
+                           
                         </div>
 
 

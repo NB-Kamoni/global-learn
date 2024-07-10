@@ -5,12 +5,18 @@
   padding: 20px;
   margin: 20px; 
   text-align: center;
-  min-height: 200px; /* Adjusted for profile circle and buttons */
+  height: 37vh; /* Adjusted for profile circle and buttons */
   width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px;
+}
+
+.welcome-card:hover {
+  
+  box-shadow: 0 4px 10px rgba(9, 237, 237); /* Increase shadow to make it pop */
 }
 
 .profile-circle {
