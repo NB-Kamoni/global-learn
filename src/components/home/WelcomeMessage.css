@@ -73,4 +73,6 @@
 
 .welcome-button:hover {
   background-color: rgba(9, 237, 237); /* Brighter hover color */
+  color: #09697D;
 }
+
