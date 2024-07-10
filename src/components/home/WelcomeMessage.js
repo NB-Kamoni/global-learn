@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '../../contexts/authContext/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import './WelcomeMessage.css';
 
 const getGreeting = () => {

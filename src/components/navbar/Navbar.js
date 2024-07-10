@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/authContext/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { doSignOut } from '../../firebase/auth';
 import { Button, Menu, Image } from 'semantic-ui-react';
 import './Navbar.css'; /* Custom CSS file for additional styling */

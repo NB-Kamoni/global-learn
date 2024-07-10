@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Login from "./components/auth/login/Login";
 import Register from "./components/auth/register/Register";
 import Navbar from "./components/navbar/Navbar";
-import { AuthProvider } from "./contexts/authContext/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import Dashboard from "./components/home/Dashboard";
 import Choppy from "./components/choppy/Choppy";
 import Analytics from "./components/analytics/Analytics"
