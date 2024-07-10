@@ -1,0 +1,13 @@
+.summary-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    background-color: #f0f0f0; /* Example background color */
+    border-radius: 10px;
+  }
+  
+  .welcome-card {
+    margin: 0 10px; /* Optional: to add some space between cards */
+  }
+  

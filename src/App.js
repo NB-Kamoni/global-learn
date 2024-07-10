@@ -15,6 +15,7 @@ import Notes from "./components/notes/Notes"
 import Calendar from "./components/calendar/Calendar"
 import Opportunities from "./components/opportunities/Opportunities"
 import Enquiries from "./components/enquiries/Enquiries"
+import UserDashboard from "./components/user-dashboard/UserDashboard";
 
 function Main() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function Main() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/choppy" element={<Choppy />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/analytics" element={<Analytics />} />

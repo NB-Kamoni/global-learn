@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import { useAuth } from '../../contexts/AuthContext';
 import WelcomeMessage from '../home/WelcomeMessage';
-import ActiveInstructors from '../cards/ActiveInstructors';
+import './UserDashboard.css';
 
 const UserDashboard = () => {
     const { userRole } = useAuth();
@@ -14,7 +14,6 @@ const UserDashboard = () => {
                     <div>
                         {/* Add student-specific dashboard content here */}
                         <WelcomeMessage />
-                        
 
 
 
@@ -36,10 +35,11 @@ const UserDashboard = () => {
                 return (
                     <div>
 
-                        <div className="container">
+                        <div className="summary-container">
                             {/* Add admin-specific dashboard content here */}
-                            <WelcomeMessage />
-                            
+                           <WelcomeMessage />
+                           <WelcomeMessage />
+                           <WelcomeMessage />
                         </div>
 
 
