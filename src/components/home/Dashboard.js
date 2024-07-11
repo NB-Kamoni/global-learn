@@ -12,7 +12,7 @@ const Dashboard = () => {
             <Sidebar />
                 <div className="content-card">
                     {/* Content Goes Here */}
-                    <WelcomeMessage />
+                  
                    
                 </div>
             </div>

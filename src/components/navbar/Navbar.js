@@ -45,7 +45,7 @@ const Navbar = () => {
       <Menu.Item as={Link} to="/" className="custom-image">
           <Image src={logoUrl} alt="Company Logo" size="small"  />
       </Menu.Item>
-      <Menu.Item className='custom-menuitem' as={Link} to="/">Home</Menu.Item>
+      <Menu.Item className='custom-menuitem' as={Link} to="/user-dashboard">Home</Menu.Item>
       <Menu.Item className='custom-menuitem'  as={Link} to="/exams">Exams</Menu.Item>
       <Menu.Item className='custom-menuitem'  as={Link} to="/schedule">Schedule</Menu.Item>
       <Menu.Item className='custom-menuitem'  as={Link} to="/finance">Finance</Menu.Item>

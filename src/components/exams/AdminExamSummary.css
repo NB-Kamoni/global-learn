@@ -1,0 +1,22 @@
+ .admin-exam-summary {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: white; 
+    padding: 20px;
+    margin: 20px; 
+    text-align: center;
+    height: 37vh; /* Adjusted for profile circle and buttons */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; /* Optional: to add some space between cards */
+  }
+
+  .admin-exam-summary:hover {
+  
+    box-shadow: 0 4px 10px rgba(9, 237, 237); /* Increase shadow to make it pop */
+  }
+  
+ 

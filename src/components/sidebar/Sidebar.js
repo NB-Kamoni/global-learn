@@ -27,7 +27,7 @@ const Sidebar = () => {
             </button>
             <ul className="sidebar-menu">
                 <li>
-                    <Link to="/dashboard">
+                    <Link to="/user-dashboard">
                         <FaTachometerAlt />
                         {!isCollapsed && <span>Dashboard</span>}
                     </Link>
