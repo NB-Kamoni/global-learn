@@ -5,6 +5,9 @@ import WelcomeMessage from '../home/WelcomeMessage';
 import AdminFinanceSummary from '../finance/AdminFinanceSummary';
 import AdminExamSummary from '../exams/AdminExamSummary';
 import './UserDashboard.css';
+import ActiveInstructors from '../profile/ActiveInstructors';
+import AcademicYear from '../schedule/AcademicYear';
+import Clock from '../calendar/Clock';
 
 const UserDashboard = () => {
     const { userRole } = useAuth();
@@ -14,37 +17,75 @@ const UserDashboard = () => {
             case 'student':
                 return (
                     <div>
-                        {/* Add student-specific dashboard content here */}
-                        <WelcomeMessage />
-
-
+                        <div className="summary-container">
+                            {/* Add admin-specific dashboard content here */}
+                           <WelcomeMessage />
+                           <AdminExamSummary />
+                           <AdminFinanceSummary />
+                        </div>
+                        <div className="content-container">
+                            <div className="left-column">
+                                 <ActiveInstructors />
+                            </div>
+                             <div className="left-column">
+                                <div className="top-card">
+                                     <Clock />
+                                </div>
+                                <div className="bottom-card">
+                                     <AcademicYear />
+                                </div>
+                                </div>
+                        </div>
 
                     </div>
                 );
             case 'instructor':
                 return (
                     <div>
-                
-                        {/* Add instructor-specific dashboard content here */}
-                        <WelcomeMessage />
-
-
-
-
+                    <div className="summary-container">
+                        {/* Add admin-specific dashboard content here */}
+                       <WelcomeMessage />
+                       <AdminExamSummary />
+                       <AdminFinanceSummary />
                     </div>
+                    <div className="content-container">
+                        <div className="left-column">
+                             <ActiveInstructors />
+                        </div>
+                         <div className="left-column">
+                            <div className="top-card">
+                                 <Clock />
+                            </div>
+                            <div className="bottom-card">
+                                 <AcademicYear />
+                            </div>
+                            </div>
+                    </div>
+
+                </div>
                 );
             case 'admin':
                 return (
                     <div>
-
                         <div className="summary-container">
                             {/* Add admin-specific dashboard content here */}
                            <WelcomeMessage />
                            <AdminExamSummary />
                            <AdminFinanceSummary />
-                           
                         </div>
-
+                        <div className="content-container">
+                            <div className="left-column">
+                                 <ActiveInstructors />
+                            </div>
+                             <div className="left-column">
+                                <div className="top-card">
+                                     <Clock />
+                                </div>
+                                <div className="bottom-card">
+                                     <AcademicYear />
+                                </div>
+                                </div>
+                        </div>
 
                     </div>
                 );

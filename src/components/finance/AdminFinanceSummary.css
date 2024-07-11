@@ -1,11 +1,11 @@
-.admin-finance-summary {
+.academic-year-card {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   background-color: white; 
   padding: 20px;
   margin: 20px; 
   text-align: center;
-  height: 37vh; /* Adjusted for profile circle and buttons */
+  height: 27vh; /* Adjusted for profile circle and buttons */
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   margin: 10px;
 }
 
-.admin-finance-summary:hover {
+.academic-year-card:hover {
   
   box-shadow: 0 4px 10px rgba(9, 237, 237); /* Increase shadow to make it pop */
 }
