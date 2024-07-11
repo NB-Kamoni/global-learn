@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Sidebar from '../sidebar/Sidebar';
 import { useAuth } from '../../contexts/AuthContext';
+import './Courses.css'
 
 const Courses = () => {
     const { userRole } = useAuth();
-
+    const [courses, setCourses] = useState([])
+    
+    useEffect(() => {
+        fetch("http://127.0.0.1:5555/courses")
+            .then((r) => r.json())
+            .then(data => setCourses(data))
+            .catch(error => console.error('Error fetching courses:', error));
+    }, [])
+        
+    
     const renderContent = () => {
         switch (userRole) {
             case 'student':
@@ -14,7 +24,7 @@ const Courses = () => {
                         <p style={{ color: '#4169E1' }}>Here you can view your enrolled courses, grades, and course materials.</p>
                         {/* Add student-specific course content here */}
 
-
+                        
 
 
 
@@ -33,16 +43,44 @@ const Courses = () => {
                     </div>
                 );
             case 'admin':
+                if (!courses.length) {
+                    return <div>Loading...</div>;
+                }
                 return (
                     <div>
                         <h2 style={{ color: '#4169E1' }}>Admin Courses Dashboard</h2>
                         <p style={{ color: '#4169E1' }}>Manage course offerings, curriculum, and instructor assignments.</p>
                         {/* Add admin-specific course content here */}
-
-
-
-
-
+                        <div className="table">
+                         
+                            <table className="table table-hover">
+                             <thead>
+                              <tr className="table-primary">
+                               <th scope="col">#</th>
+                               <th scope="col">Name</th>
+                               <th scope="col">Description</th>
+                               {/* <th scope="col">Teacher</th> */}
+                               {/* <th scope="col">Course code</th> */}
+                               {/* <th scope="col">Duration</th> */}
+                              </tr>
+                             </thead>
+                             {courses.map(course =>(
+                             <tbody>
+                              <tr>
+                                <th scope="row">{course.course_id}</th>
+                                <td>{course.name}</td>
+                                <td>{course.description}</td>
+                                {/* <td>{course.teacher_id}</td> */}
+                                {/* <td>{course.course_code}</td> */}
+                                {/* <td>{course.duration}</td> */}
+                                
+                              </tr>
+                             </tbody>
+                             ))}
+                          </table>
+                         
+                        </div>
+                      
                     </div>
                 );
             default:
