@@ -1,0 +1,138 @@
+{
+    "fees": [
+      {
+        "course": "Art Based",
+        "diploma": {
+          "Tuition": 100000,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 26000,
+          "Statutory Fees": 26000
+        }
+      },
+      {
+        "course": "Science Based",
+        "diploma": {
+          "Tuition": 110000,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 26000,
+          "Statutory Fees": 26000
+        }
+      },
+      {
+        "course": "Architecture",
+        "diploma": {
+          "Tuition": 133285,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 26000,
+          "Statutory Fees": 26000
+        }
+      },
+      {
+        "course": "Law",
+        "diploma": {
+          "Tuition": 150000,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 26000,
+          "Statutory Fees": 26000
+        }
+      },
+      {
+        "course": "Creative Arts, Film and Media Studies",
+        "diploma": {
+          "Tuition": 82000,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 65325,
+          "Statutory Fees": 26000
+        }
+      },
+      {
+        "course": "Pharmacy",
+        "diploma": {
+          "Tuition": 400000,
+          "Statutory Fees": 55200
+        },
+        "certificate": {
+          "Tuition": 55200,
+          "Statutory Fees": 55200
+        }
+      },
+      {
+        "course": "Medicine & Surgery",
+        "diploma": {
+          "Tuition": 450400,
+          "Statutory Fees": 55200
+        },
+        "certificate": {
+          "Tuition": 55200,
+          "Statutory Fees": 55200
+        }
+      },
+      {
+        "course": "Nursing and Public Health",
+        "diploma": {
+          "Tuition": 240000,
+          "Statutory Fees": 55200
+        },
+        "certificate": {
+          "Tuition": 55200,
+          "Statutory Fees": 55200
+        }
+      },
+      {
+        "course": "Diploma",
+        "diploma": {
+          "Tuition": 72000,
+          "Statutory Fees": 26000
+        },
+        "certificate": {
+          "Tuition": 40000,
+          "Statutory Fees": 26000
+        }
+      }
+    ],
+    "salaries": [
+      {
+        "role": "Science Teacher",
+        "salary": 60000
+      },
+      {
+        "role": "Mathematics Teacher",
+        "salary": 60000
+      },
+      {
+        "role": "Art Teacher",
+        "salary": 45000
+      },
+      {
+        "role": "Law Teacher",
+        "salary": 55000
+      },
+      {
+        "role": "Creative Arts Teacher",
+        "salary": 45000
+      },
+      {
+        "role": "Pharmacy Teacher",
+        "salary": 50000
+      },
+      {
+        "role": "Medicine & Surgery Teacher",
+        "salary": 50000
+      },
+      {
+        "role": "Nursing and Public Health Teacher",
+        "salary": 50000
+      }
+    ]
+  }
+  

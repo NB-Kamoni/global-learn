@@ -18,4 +18,117 @@
   
   box-shadow: 0 4px 10px rgba(9, 237, 237); /* Increase shadow to make it pop */
 }
+.finance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px 0;
+}
+
+.finance-table th, .finance-table td {
+  border: 10px solid #ddd;
+  padding: 8px;
+  text-align: right;
+}
+.finance-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+.admin-finance-summary {
+  padding: 20px;
+}
+
+.admin-finance-summary-content {
+  margin-top: 50 px;
+}
+.dashboard_finance {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content-card_finance {
+  flex: 1;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select-wrapper_finance {
+  margin-bottom: 20px;
+}
+
+.select-wrapper_finance label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.select-wrapper_finance select {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.table_finance {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table_finance, .table_finance th, .table_finance td {
+  border: 1px solid #ddd;
+}
+
+.table_finance th, .table_finance td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table_finance th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table_finance tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table_finance tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.admin-finance-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-summary-content,
+.student-summary-content,
+.instructor-summary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-card {
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.summary-card h3,
+.summary-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+
+ 
+
 

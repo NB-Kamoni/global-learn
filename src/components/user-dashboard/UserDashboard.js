@@ -2,7 +2,6 @@ import React from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import { useAuth } from '../../contexts/AuthContext';
 import WelcomeMessage from '../home/WelcomeMessage';
-import AdminFinanceSummary from '../finance/AdminFinanceSummary';
 import AdminExamSummary from '../exams/AdminExamSummary';
 import './UserDashboard.css';
 import ActiveInstructors from '../profile/ActiveInstructors';
@@ -18,75 +17,69 @@ const UserDashboard = () => {
                 return (
                     <div>
                         <div className="summary-container">
-                            {/* Add admin-specific dashboard content here */}
-                           <WelcomeMessage />
-                           <AdminExamSummary />
-                           <AdminFinanceSummary />
+                            <WelcomeMessage />
+                            <AdminExamSummary />
+                            {/* Note: AdminFinanceSummary is not included here for 'student' */}
                         </div>
                         <div className="content-container">
                             <div className="left-column">
-                                 <ActiveInstructors />
+                                <ActiveInstructors />
                             </div>
-                             <div className="left-column">
+                            <div className="left-column">
                                 <div className="top-card">
-                                     <Clock />
+                                    <Clock />                                    
                                 </div>
                                 <div className="bottom-card">
-                                     <AcademicYear />
+                                    <AcademicYear />
                                 </div>
-                                </div>
+                            </div>
                         </div>
-
                     </div>
                 );
             case 'instructor':
                 return (
                     <div>
-                    <div className="summary-container">
-                        {/* Add admin-specific dashboard content here */}
-                       <WelcomeMessage />
-                       <AdminExamSummary />
-                       <AdminFinanceSummary />
-                    </div>
-                    <div className="content-container">
-                        <div className="left-column">
-                             <ActiveInstructors />
+                        <div className="summary-container">
+                            <WelcomeMessage />
+                            <AdminExamSummary />
+                            {/* Note: AdminFinanceSummary is not included here for 'instructor' */}
                         </div>
-                         <div className="left-column">
-                            <div className="top-card">
-                                 <Clock />
+                        <div className="content-container">
+                            <div className="left-column">
+                                <ActiveInstructors />
                             </div>
-                            <div className="bottom-card">
-                                 <AcademicYear />
+                            <div className="left-column">
+                                <div className="top-card">
+                                    <Clock />
+                                </div>
+                                <div className="bottom-card">
+                                    <AcademicYear />
+                                </div>
                             </div>
-                            </div>
+                        </div>
                     </div>
-
-                </div>
                 );
             case 'admin':
                 return (
                     <div>
                         <div className="summary-container">
-                            {/* Add admin-specific dashboard content here */}
-                           <WelcomeMessage />
-                           <AdminExamSummary />
-                           <AdminFinanceSummary />
+                            <WelcomeMessage />
+                            <AdminExamSummary />
+                    
                         </div>
                         <div className="content-container">
                             <div className="left-column">
-                                 <ActiveInstructors />
+                                <ActiveInstructors />
                             </div>
-                             <div className="left-column">
+                            <div className="left-column">
                                 <div className="top-card">
-                                     <Clock />
+                                    <Clock />
                                 </div>
                                 <div className="bottom-card">
-                                     <AcademicYear />
+                                    <AcademicYear />
                                 </div>
-                                </div>
+                            </div>
                         </div>
-
                     </div>
                 );
             default:
@@ -94,7 +87,6 @@ const UserDashboard = () => {
                     <div>
                         <h2 style={{ color: '#4169E1' }}>User Dashboard</h2>
                         <p style={{ color: '#4169E1' }}>Please log in to view dashboard details.</p>
-                        {/* We don't need general content */}
                     </div>
                 );
         }
