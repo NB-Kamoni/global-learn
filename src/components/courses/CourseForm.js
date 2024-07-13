@@ -15,9 +15,10 @@ export default function CourseForm() {
     const onSubmit = async (data) => {
         try {
           await axios.post(
-            "https://global-learn-backend.onrender.com/courses",
+            "http://127.0.0.1:5555/courses",
             data
           );
+          console.log(data)
           setSubmitSuccess(true);
           reset();
         } catch (error) {
@@ -30,7 +31,7 @@ export default function CourseForm() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2>Add New Course</h2>
           <div class="mb-3">
-            <label htmlFor="name" class="form-label">Course Name</label>
+            <label htmlFor="course_name" class="form-label">Course Name</label>
             <input type="text" class="form-control" 
             id="name"
             {...register("name", { required: "Name is required" })}/>

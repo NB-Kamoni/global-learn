@@ -10,11 +10,15 @@ const Courses = () => {
     const [courses, setCourses] = useState([])
     
     useEffect(() => {
-        fetch("https://global-learn-backend.onrender.com/courses")
+        fetch("http://127.0.0.1:5555/courses")
             .then((r) => r.json())
             .then(data => setCourses(data))
             .catch(error => console.error('Error fetching courses:', error));
     }, [])
+
+    function handleDelete(course) {
+        console.log("Deleting course:", course);
+    }
         
     
     const renderContent = () => {
@@ -40,7 +44,7 @@ const Courses = () => {
                              <tbody>
                               <tr>
                                 <th scope="row">{course.course_id}</th>
-                                <td>{course.name}</td>
+                                <td>{course.course_name}</td>
                                 <td>{course.description}</td>
                                 <td>{course.course_code}</td>
                                 <td>{course.duration_years}</td>
@@ -70,7 +74,7 @@ const Courses = () => {
                         <p style={{ color: '#4169E1' }}>Manage course offerings, curriculum, and instructor assignments.</p>
                         {/* Add admin-specific course content here */}
                             <CourseForm/>    
-                        <CourseTable/>
+                        <CourseTable onDelete={handleDelete}/>
                       
                     </div>
                 );

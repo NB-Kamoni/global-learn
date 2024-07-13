@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from '../sidebar/Sidebar';
 import './Courses.css';
+import { MdDelete } from "react-icons/md";
 
 
-function CourseTable(){
+function CourseTable({onDelete}){
   const [courses, setCourses] = useState([])
     
   useEffect(() => {
@@ -12,6 +12,22 @@ function CourseTable(){
         .then(data => setCourses(data))
         .catch(error => console.error('Error fetching courses:', error));
     }, [])
+
+  const handleDelete = (id) => {
+    fetch(`http://127.0.0.1:5555/courses/${id}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to delete course');
+      }
+      onDelete(id);
+    })
+    .catch(error => {
+      console.error('Error deleting course:', error);
+    });
+  };
+
 
     if (!courses.length) {
         return <div>Loading...</div>;
@@ -38,6 +54,10 @@ function CourseTable(){
            <td>{course.course_code}</td>
            <td>{course.duration_years}</td>
            <td>{course.teacher_id}</td>
+           {/* <button onClick={() => handleDelete(course.id)}>Delete</button> */}
+           <div className='delete'>
+             <MdDelete onClick={() => handleDelete(course.course_id)}/>
+           </div>
           </tr>
         </tbody>
         ))}
