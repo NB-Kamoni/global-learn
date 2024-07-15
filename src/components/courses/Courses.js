@@ -44,7 +44,7 @@ const Courses = () => {
                              <tbody>
                               <tr>
                                 <th scope="row">{course.course_id}</th>
-                                <td>{course.course_name}</td>
+                                <td>{course.name}</td>
                                 <td>{course.description}</td>
                                 <td>{course.course_code}</td>
                                 <td>{course.duration_years}</td>

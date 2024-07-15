@@ -3,6 +3,7 @@ import './Courses.css';
 import { MdDelete } from "react-icons/md";
 
 
+
 function CourseTable({onDelete}){
   const [courses, setCourses] = useState([])
     
