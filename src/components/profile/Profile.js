@@ -6,11 +6,11 @@ import { useAuth } from '../../contexts/AuthContext';
 const Profile = ({ visible, onClose }) => {
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(true);
-  const [profileData, setProfileData] = useState(null);
+  const [profileData, setProfileData] = useState([]);
 
   useEffect(() => {
     if (visible) {
-      fetch(`/api/user/profile/${currentUser.uid}`)
+      fetch(`http://127.0.0.1:5555/students`)
         .then((response) => response.json())
         .then((data) => {
           setProfileData(data);
@@ -30,18 +30,26 @@ const Profile = ({ visible, onClose }) => {
       onClose={onClose}
       visible={visible}
     >
-      {loading ? (
+      {/* {loading ? (
         <Spin />
       ) : profileData ? (
         <div>
           <p><strong>Name:</strong> {profileData.name}</p>
           <p><strong>Email:</strong> {profileData.email}</p>
-          <p><strong>Role:</strong> {profileData.role}</p>
+          <p><strong>Registration No:</strong> {profileData.reg_no}</p>
           {/* Add more profile fields as needed */}
-        </div>
+        {/* </div>
       ) : (
         <p>No profile data found</p>
-      )}
+      )} */} 
+      <div>
+        {profileData.map(pd => (
+          <>
+          <h4>Name:{pd.name}</h4>
+          <h4>Email:{pd.email}</h4>
+          </>
+        ))}
+      </div>
     </Drawer>
   );
 };

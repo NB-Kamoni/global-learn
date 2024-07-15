@@ -15,7 +15,7 @@ const getUserRole = (email) => {
     return 'admin';
   } else if (email.endsWith('@gmail.com')) {
     return 'student';
-  } else if (email.endsWith('@students.uonbi.ac.ke')) {
+  } else if (email.endsWith('@yahoo.com')) {
     return 'instructor';
   } else {
     return 'guest';
