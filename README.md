@@ -44,6 +44,21 @@ The system is divided into several key components:
 - **View**: Access their own profile, course details, and exam results.
 - **Finance**: View school fees.
 - **Courses**: View courses they are enrolled in.
+## User Authentication
+
+The system features domain-based user authentication. Depending on the domain used to access the system, users can log in as different roles:
+
+- **Students**: Accessible via the student domain.
+- **Instructors (Teachers)**: Accessible via the instructor domain.
+- **Admin**: Accessible via the admin domain.
+
+This allows for streamlined and secure access based on the user’s role, ensuring that each user sees only the relevant information and functionalities.
+## Technologies Used
+- Frontend: React.js, HTML, CSS
+- Backend: Node.js, Python
+- Authentication: Firebase
+- Database: MySQL
+- Other Tools: Firebase for authentication.
 
 ## Getting Started
 
@@ -51,3 +66,6 @@ To get started with the School Management System, follow these steps:
 
 1. **Clone the Repository**:
    ```git clone git@github.com:NB-Kamoni/global-learn.git```
+2. **Start the Apllication**:
+    npm start
+    The application should now be running on http://localhost:3000.
