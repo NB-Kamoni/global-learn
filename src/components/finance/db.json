@@ -1,0 +1,71 @@
+{
+    "students": [
+      {
+        "student_id": 1,
+        "name": "John Ramos",
+        "course_id": 101,
+        "fees": 1500,
+        "pendingBalance": 0,
+        "paymentHistory": [
+          {
+            "date": "2024-07-10",
+            "amount": 1500
+          }
+        ]
+      },
+      {
+        "student_id": 2,
+        "name": "Joanna Smith",
+        "course_id": 102,
+        "fees": 2000,
+        "pendingBalance": 250,
+        "paymentHistory": [
+          {
+            "date": "2024-07-09",
+            "amount": 1750
+          }
+        ]
+      }
+    ],
+    "teachers": [
+      {
+        "teacher_id": 1,
+        "name": "Mr. Brown",
+        "course_id": 101,
+        "salary": 3000,
+        "totalEarned": 75000,
+        "pendingBalance": 0,
+        "paymentHistory": [
+          {
+            "date": "2024-06-30",
+            "amount": 3000
+          }
+        ]
+      },
+      {
+        "teacher_id": 2,
+        "name": "Ms. Green",
+        "course_id": 102,
+        "salary": 3500,
+        "totalEarned": 40000,
+        "pendingBalance": 0,
+        "paymentHistory": [
+          {
+            "date": "2024-06-30",
+            "amount": 3500
+          }
+        ]
+      }
+    ],
+    "courses": [
+      {
+        "course_id": 101,
+        "title": "Math 101"
+      },
+      {
+        "course_id": 102,
+        "title": "History 101"
+      }
+    ]
+  }
+  

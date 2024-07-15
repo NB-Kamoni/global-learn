@@ -6,7 +6,7 @@
     margin: 20px; 
     text-align: center;
     height: 57vh; /* Adjusted for profile circle and buttons */
-    width: 815px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
