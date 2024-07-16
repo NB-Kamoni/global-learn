@@ -11,8 +11,8 @@ const Schedule = () => {
 
     const createSchedule = () => {
         const newEntry = {
-            id: Date.now(), // Generate a unique ID based on the current timestamp
-            text: newSchedule,
+            id: Date.now(), 
+                text: newSchedule,
         };
         setSchedules([...schedules, newEntry]);
         setNewSchedule('');
